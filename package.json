@@ -1,0 +1,14 @@
+{
+  "name": "Exo",
+  "version": "0.1.0",
+  "devDependencies": {
+    "config-grunt-tasks": "^1.0.3",
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express": "^1.4.1"
+  },
+  "dependencies": {
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express": "^1.4.1"
+  }
+}
