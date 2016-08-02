@@ -1,3 +1,6 @@
-p {
-	color: tomato;
+.fa-trello{
+  float: left;
+  display: block;
+  margin-right: 20px;
+  margin-bottom: 150px;
 }
