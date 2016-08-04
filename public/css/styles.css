@@ -71,3 +71,25 @@
 input[type="checkbox"] {
 	display:none;
 }
+
+input[type="checkbox"] + label span {
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	background: url(../img/check_radio_sheet.png) left top no-repeat;
+	margin: -1px 30px 0 0;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+	background: url(../img/check_radio_sheet.png) -19px top no-repeat;
+}
+
+
+
+
+
+
+
+
