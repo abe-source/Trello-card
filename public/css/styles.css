@@ -1,4 +1,6 @@
-/********* MAIN STYLES ************/
+/************************************
+*********** MAIN STYLES ************
+*************************************/
 .wrapper {
 	max-width: 960px;
 	margin: 0 auto;
@@ -25,7 +27,16 @@ span {
 }
 
 .wrapper-left {
-	max-width: 75%;
+	width: 80%;
+	display: inline-block;
+}
+
+.wrapper-right {
+	width: 18%;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 auto;
+
 }
 
 .labels,
@@ -33,11 +44,9 @@ span {
 	margin-left: 40px;
 }
 
-.boxsizing-border {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+/************************************
+*********** WRAPPER LEFT ************
+*************************************/
 
 /********* HEADER STYLES ************/
 
@@ -153,4 +162,46 @@ ul {
 
 .activity-log {
 	margin-left: -28px;
+}
+
+.activity-comment p{
+	border: 1px solid black;
+	display: inline-block;
+	padding: 20px;
+}
+
+/************************************
+*********** WRAPPER RIGHT ***********
+*************************************/
+
+.wrapper-right a{
+	text-decoration: none;
+	color: black;
+}
+
+.add-buttons {
+	margin-left: 10px;
+}
+
+/********* BUTTON STYLES ************/
+.btn-right {
+	background: linear-gradient(to bottom,#fff 0,#f8f9f9 100%);
+	box-sizing: border-box;
+	border: 1px solid #e2e4e6;
+	border-bottom-color: #cdd2d4;
+	cursor: pointer;
+	display: block;
+	height: 34px;
+	margin-top: 6px;
+	max-width: 300px;
+	overflow: hidden;
+	padding: 7px;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.btn-right i{
+	padding-left: 5px;
+	padding-right: 10px;
 }
