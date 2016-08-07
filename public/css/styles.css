@@ -1,25 +1,48 @@
-.fa-trello,
-.fa-check-square,
-.fa-comment-o {
-  float: left;
-  display: block;
-  margin-right: 20px;
-  margin-bottom: 150px;
+/********* MAIN STYLES ************/
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
 }
 
-.fa-check-square {
-	padding-top: 20px;
-	margin-bottom: 0;
+.container {
+	display: flex;
 }
 
-.align-left {
-	float: left;
+.fixed {
+	width: 40px;
 }
 
-.align-right {
-	float: right;
+.flex-item {
+	flex-grow: 1;
 }
-/********** CHECKLIST *************************************/
+
+h3 {
+	margin: 0;
+}
+
+
+
+
+/********* HEADER STYLES ************/
+
+.header > p {
+	font-size: 14px
+}
+
+
+
+
+
+
+/********* LABELS STYLES ************/
+.labels {
+	margin-right: 40px;
+}
+
+
+
+
+
 
 /******CHECKLIST METER *****************/
 .meter-outer {
