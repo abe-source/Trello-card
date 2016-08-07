@@ -1,5 +1,6 @@
 .fa-trello,
-.fa-check-square {
+.fa-check-square,
+.fa-comment-o {
   float: left;
   display: block;
   margin-right: 20px;
@@ -72,7 +73,36 @@ input[type="checkbox"] {
 	display:none;
 }
 
-input[type="checkbox"] + label span {
+label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	font-size: 13px;
+
+}
+
+.checkbox label:before {
+	content: "";
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	margin-right: 10px;
+	background-color: #f6f6f6;
+	border-radius: 3px;
+
+}
+
+
+input[type=checkbox]:checked + label:before {
+	content: "\2713";
+	text-shadow: 1px 1px 1px rgba(0,0,0 .2);
+	font-size: 14px; //confirmed inherited from body
+	color: #f3f3f3f3;
+	text-align: center;
+	line-height: 15px;
+}
+
+/*input[type="checkbox"] + label span {
 	display: inline-block;
 	width: 19px;
 	height: 19px;
@@ -84,7 +114,7 @@ input[type="checkbox"] + label span {
 
 input[type="checkbox"]:checked + label span {
 	background: url(../img/check_radio_sheet.png) -19px top no-repeat;
-}
+}*/
 
 
 
