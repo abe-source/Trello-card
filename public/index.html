@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Trello Card</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-<!-- 	<link rel="stylesheet" href="css/simple-grid.css"> -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -22,14 +22,32 @@
   	</section> <!-- END OF SECTION HEADER -->
 	<div class="wrapper-left">
 	<!-- SECTION LABELS -->
-	  <section>
-	  	<div class="labels">
+	  <section class="labels">
 	  		<p>Labels</p>
-	  		<button>Coding Challange</button>
-	  		<button>+</button>
-  		</div>
+	  		<button class="btn btn-blue">Coding Challange</button>
+	  		<button class="btn btn-add">+</button>
+	  		<p><i class="fa fa-align-left" aria-hidden="true"></i>Edit the description</p>
   	</section> <!-- END OF SECTION LABELS -->
-			  		
+	<!-- SECTION CHECKLIST -->
+		<section class="checklist">
+			<div class="checklist-header container">
+				<div class="fixed">
+  		  <img src="/img/checklist-ico.png" width="20.02px" height="20px"  class="section-ico" alt="checlist icon">
+  		 </div>
+  		<div class="flex-item">
+  		  <h3>Checklist</h3>
+  		</div>
+  		<span>Hide completed items&nbsp;&nbsp;</span>
+  		<span>Delete</span>
+			</div> <!-- END OF CHECKLIST HEADER -->
+			<div class="meter container">
+				<label for="progress-bar" class="fixed progress-label">33%</label>
+				<progress value="33" max="100" id="progress-bar" class="flex-item"></progress>
+			</div> <!-- END OF METER -->
+			<div class="check-list">
+				
+			</div> 
+		</section> <!-- END OF SECTION CHECKLIST -->		  		
 	</div> <!-- END OF WRAPPER LEFT -->
   </div> <!-- END OF WRAPPER -->	
 

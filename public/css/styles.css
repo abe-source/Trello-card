@@ -20,7 +20,13 @@ h3 {
 	margin: 0;
 }
 
+span {
+	margin-top: 2px;
+}
 
+.wrapper-left {
+	max-width: 75%;
+}
 
 
 /********* HEADER STYLES ************/
@@ -36,7 +42,7 @@ h3 {
 
 /********* LABELS STYLES ************/
 .labels {
-	margin-right: 40px;
+	margin-left: 40px;
 }
 
 
@@ -44,8 +50,57 @@ h3 {
 
 
 
+/********* CHECKLIST STYLES ************/
+
+
+
+
+/*** PROGRESS BAR ***/
+.progress-label {
+	margin-top: 4px;
+}
+
+progress[value] {
+	width: 100%;	
+}
+
+/*
+progress[value] {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 20px;
+}
+
+progress[value]::-webkit-progress-bar {
+	backgroud-color: #eee;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+progress[value]::-webkit-progress-value {
+	border-radius: 2px;
+	background-size: 2px, 4px, 100% 100%;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /******CHECKLIST METER *****************/
-.meter-outer {
+/*.meter-outer {
 	width: 100%;
 	overflow: hidden;
 }
@@ -83,7 +138,7 @@ h3 {
 	;
 	position: relative;
 	overflow: hidden;
-}
+}*/
 
 .blue > span {
 	background-position: #0079BF;
