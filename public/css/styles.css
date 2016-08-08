@@ -2,8 +2,9 @@
 *********** MAIN STYLES ************
 *************************************/
 .wrapper {
-	max-width: 960px;
+	max-width: 700px;
 	margin: 0 auto;
+	padding: 15px 10px;
 }
 
 .container {
@@ -44,15 +45,51 @@ span {
 	margin-left: 40px;
 }
 
+body {
+	margin-top: 20px;
+	color: #4d4d4d;
+	background-color: rgba(0,0,0, 0.7);
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+.wrapper p {
+	font-size: 14px;
+	color: #8c8c8c;
+
+}
+
+.wrapper {
+	border-radius: 5px;
+	background-color: #EDEFF0;
+}
+
+.section-p {
+	padding: 0;
+	margin: 0;
+	margin-top: 5px;
+}
+
+.checklist,
+.comments,
+.activity {
+	padding-top: 20px;
+}
+
+.btn {
+	cursor: pointer;
+}
+
+.btn:hover {
+	opacity: .75;
+}
+
 /************************************
 *********** WRAPPER LEFT ************
 *************************************/
 
 /********* HEADER STYLES ************/
 
-.header > p {
-	font-size: 14px
-}
 
 
 
@@ -60,16 +97,72 @@ span {
 
 
 /********* LABELS STYLES ************/
+.labels {
+	padding-top: 15px;
+}
 
+.label-buttons {
+	padding-top: 10px;
+}
 
+.edit-description {
+	padding-top: 20px;
+}
 
+.btn-blue {
+	background-color: #0079bf;
+	color: #fff;
+	font-weight: 700;
+	text-shadow: 0 0 5px rgba(0,0,0,.2),0 0 2px #000;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	font-size: 12px;
+}
 
+.btn-blue:hover {
+	background-color: #0079d9;
+}
 
+.btn-add {
+	padding: 10px 12px;
+	font-size: 12px;
+	border-radius: 5px;
+	border: none;
+	background: #D6DADC;
+	color: #4D4D4D;
+}
 
+.edit-description {
+	
+}
 
+.edit-description p {
+	padding: 5px;
+	cursor: pointer;
+	color: #8c8c8c;
+	padding-left: 20px;
+	
+}
+
+.edit-description p:hover {
+	background-color: tomato;
+	background: #d6dadc;
+	border-radius: 3px;
+	color: #4d4d4d;
+
+}
 
 /********* CHECKLIST STYLES ************/
+.checklist-options span {
+	font-size: 14px;
+	color: #8c8c8c;
+	cursor: pointer;
+}
 
+.checklist-options span:hover {
+	color: #4d4d4d;
+}
 
 
 
@@ -77,6 +170,8 @@ span {
 
 .progress-label {
 	margin-top: 4px;
+	font-size: 12px;
+	color: #8c8c8c;
 }
 
 progress[value] {
@@ -123,6 +218,12 @@ progress[value] {
 	color: #999;
 	text-align: center;
 	line-height: 15px;
+}
+
+input[type=checkbox]:checked + label {
+	text-decoration: line-through;
+	font-style: italic;
+	color: #8c8c8c;
 }
 
 /********* COMMENTS STYLES ************/
