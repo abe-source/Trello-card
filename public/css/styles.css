@@ -76,6 +76,11 @@ body {
 	padding-top: 20px;
 }
 
+.comments-header,
+.activity-header {
+	margin-bottom: 10px;
+}
+
 .btn {
 	cursor: pointer;
 }
@@ -226,7 +231,12 @@ input[type=checkbox]:checked + label {
 	color: #8c8c8c;
 }
 
+.add-item {
+	cursor: pointer;
+}
+
 /********* COMMENTS STYLES ************/
+
 
 .comments-main textarea {
 	width: 100%;
@@ -247,14 +257,25 @@ input[type=checkbox]:checked + label {
 
 .text-area {
 	position: relative;
+	outline: none;
 }
 
 .text-area-options {
 	position: absolute;
 	right: 20px;
-	bottom: 35px;
+	bottom: 45px;
 }
 
+.btn-send-comment {
+	background: #e2e4e6;
+	box-shadow: none;
+	color: #8c8c8c;
+	border-radius: 3px;
+	border: none;
+	margin: 8px 4px 0 0 ;
+	padding: 7px 20px;
+	font-size: 12px;
+}
 /********* ACTIVITY STYLES ************/
 
 ul {
