@@ -28,12 +28,12 @@ span {
 }
 
 .wrapper-left {
-	width: 80%;
+	width: 79%;
 	display: inline-block;
 }
 
 .wrapper-right {
-	width: 18%;
+	width: 20%;
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 auto;
@@ -286,12 +286,30 @@ ul {
 	margin-left: -28px;
 }
 
-.activity-comment p{
-	border: 1px solid black;
-	display: inline-block;
-	padding: 20px;
+.activity-comment {
 }
 
+.activity-comment p {
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(0,0,0, .23);
+	display: inline-block;
+	padding: 20px;
+	background-color: #fff;
+}
+
+.user-name {
+	font-weight: bold;
+	padding: 0 5px 10px 5px;
+}
+
+.user-activity {
+	font-size: 14px;
+}
+
+.activity-time {
+	color: #8c8c8c;
+	font-size: 12px;
+}
 /************************************
 *********** WRAPPER RIGHT ***********
 *************************************/
@@ -321,6 +339,9 @@ ul {
 	position: relative;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	color: #8c8c8c;
+	font-weight: bold;
+	font-size: 13px
 }
 
 .btn-right i{
