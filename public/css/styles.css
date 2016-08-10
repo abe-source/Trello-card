@@ -104,6 +104,7 @@ body {
 /********* LABELS STYLES ************/
 .labels {
 	padding-top: 15px;
+	margin-bottom: 1px;
 }
 
 .label-buttons {
@@ -120,9 +121,10 @@ body {
 	font-weight: 700;
 	text-shadow: 0 0 5px rgba(0,0,0,.2),0 0 2px #000;
 	padding: 10px;
-	border-radius: 5px;
+	border-radius: 3px;
 	border: none;
-	font-size: 12px;
+	font-size: 14px;
+	padding: 7px 8px;
 }
 
 .btn-blue:hover {
@@ -130,12 +132,13 @@ body {
 }
 
 .btn-add {
-	padding: 10px 12px;
 	font-size: 12px;
-	border-radius: 5px;
+	border-radius: 3px;
 	border: none;
-	background: #D6DADC;
-	color: #4D4D4D;
+	background: #e2e4e6;
+	color: #8c8c8c;
+	font-size: 14px;
+	padding: 8px 10px;
 }
 
 .edit-description {
@@ -159,6 +162,10 @@ body {
 }
 
 /********* CHECKLIST STYLES ************/
+.meter {
+	margin-top: 5px;
+}
+
 .checklist-options span {
 	font-size: 14px;
 	color: #8c8c8c;
@@ -175,13 +182,16 @@ body {
 
 .progress-label {
 	margin-top: 4px;
-	font-size: 12px;
+	margin-left: 2px;
+	font-size: 11px;
 	color: #8c8c8c;
 }
 
 progress[value] {
 	width: 100%;	
+	height: 20px;
 }
+
 
 /*** CHECKBOX LIST ***/
 .checkbox {
@@ -241,7 +251,7 @@ input[type=checkbox]:checked + label {
 .comments-main textarea {
 	width: 100%;
 	border-radius: 2px;
-	box-shadow: 1px 1px 5px 2px #d6d8d9;
+	box-shadow: 2px 2px 2px 1px #dddddd;
 	border: none;
 	resize: none;
 }
@@ -262,8 +272,8 @@ input[type=checkbox]:checked + label {
 
 .text-area-options {
 	position: absolute;
-	right: 20px;
-	bottom: 45px;
+	right: 10px;
+	bottom: 50px;
 }
 
 .btn-send-comment {
@@ -291,9 +301,9 @@ ul {
 
 .activity-comment p {
 	border-radius: 3px;
-	box-shadow: 0 1px 2px rgba(0,0,0, .23);
+	box-shadow: 1px 1px 1px 1px #dddddd;
 	display: inline-block;
-	padding: 20px;
+	padding: 10px;
 	background-color: #fff;
 }
 
