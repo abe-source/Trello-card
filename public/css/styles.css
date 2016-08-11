@@ -179,6 +179,38 @@ body {
 
 
 /*** PROGRESS BAR ***/
+/*General falback*/
+progress {
+	background-color: #D6DADC;
+	border: 0;
+	border-radius: 9px;
+	height: 8px;
+	margin-top: 6px;
+}
+
+/*Safari Chrome Fallback*/
+
+progress::-webkit-progress-bar {
+  background-color: #D6DADC;
+	border: 0;
+	border-radius: 9px;
+	height: 8px;
+}
+progress::-webkit-progress-value {
+  background-color: #5ba4cf;
+	border: 0;
+	height: 8px;
+	border-radius: 9px;
+}
+
+/*Mozzila fallback*/
+
+progress::-moz-progress-bar {
+  background-color: #5ba4cf;
+	border: 0;
+	height: 8px;
+	border-radius: 9px;
+}
 
 .progress-label {
 	margin-top: 4px;
@@ -189,7 +221,6 @@ body {
 
 progress[value] {
 	width: 100%;	
-	height: 20px;
 }
 
 
