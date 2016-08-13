@@ -289,11 +289,9 @@ input[type=checkbox]:checked + label {
 	box-shadow: 2px 2px 2px 1px #dddddd;
 	border: none;
 	resize: none;
-}
-
-::-webkit-input-placeholder {
-	padding-left: 5px;
-	padding-top: 5px;
+	padding: 10px 0 10px 10px;
+  max-width: 500px;
+  color: #8e8e8d;
 }
 
 .t-area-opt {
@@ -307,8 +305,8 @@ input[type=checkbox]:checked + label {
 
 .text-area-options {
 	position: absolute;
-	right: 10px;
-	bottom: 50px;
+	right: 20px;
+	bottom: 60px;
 }
 
 .btn-send-comment {
@@ -324,6 +322,9 @@ input[type=checkbox]:checked + label {
 	font-weight: 400;
 }
 /********* ACTIVITY STYLES ************/
+.activity p {
+	margin: 0;
+}
 
 .usr-lg img {
 	width: 30px;
@@ -348,18 +349,22 @@ input[type=checkbox]:checked + label {
 	font-size: 14px;
 }
 
-.user-activity p {
-	margin: 5px;
-}
-
 .activity-time {
 	color: #8c8c8c;
 	font-size: 12px;
-	margin-left: 5px;
 }
 
 .user-info {
 	border-bottom: 1px solid #d5dadc;
+}
+
+.user-activity-small {
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+.user-name {
+	font-weight: 700;
 }
 /************************************
 *********** WRAPPER RIGHT ***********
