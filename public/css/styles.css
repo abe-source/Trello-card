@@ -98,11 +98,34 @@ body {
 
 /********* HEADER STYLES ************/
 
+.dynamic-title {
+	resize: none;
+	border: none;
+	background-color: #EDEFF0;
+	font-weight: 700;
+	font-size: 1.17em;
+	width: 500px;
+}
 
+.dynamic-title:focus {
+	background-color: #fff;
+}
 
+.dynamic-title::-webkit-input-placeholder { 
+	color: black; 
+}
 
+.dynamic-title:-moz-placeholder { 
+	color: black; 
+}
 
+.dynamic-title::-moz-placeholder {
+ color: black; 
+}
 
+.dynamic-title:-ms-input-placeholder { 
+	color: black; 
+}
 
 /********* LABELS STYLES ************/
 .labels {
