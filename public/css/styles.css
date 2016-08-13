@@ -323,7 +323,8 @@ input[type=checkbox]:checked + label {
 }
 /********* ACTIVITY STYLES ************/
 .activity p {
-	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .usr-lg img {
@@ -355,11 +356,16 @@ input[type=checkbox]:checked + label {
 }
 
 .user-info {
+	padding-top: 10px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #d5dadc;
 }
 
+.last {
+	border: none;
+}
+
 .user-activity-small {
-	padding-top: 10px;
 	font-size: 14px;
 }
 
