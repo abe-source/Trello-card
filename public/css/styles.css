@@ -323,7 +323,8 @@ input[type=checkbox]:checked + label {
 }
 /********* ACTIVITY STYLES ************/
 .activity p {
-	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .usr-lg img {
@@ -355,11 +356,16 @@ input[type=checkbox]:checked + label {
 }
 
 .user-info {
+	padding-top: 10px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #d5dadc;
 }
 
+.last {
+	border: none;
+}
+
 .user-activity-small {
-	padding-top: 10px;
 	font-size: 14px;
 }
 
@@ -377,6 +383,10 @@ input[type=checkbox]:checked + label {
 
 .add-buttons {
 	margin-left: 10px;
+}
+
+.add-buttons-bottom {
+	margin-top: 20px;
 }
 
 /********* BUTTON STYLES ************/
@@ -403,4 +413,14 @@ input[type=checkbox]:checked + label {
 .btn-right i{
 	padding-left: 5px;
 	padding-right: 10px;
+	color: #9A9A9A;
+}
+
+hr {
+	border-top: 1px solid #d5dadc;
+	background-color: #EDEFF0;
+}
+
+.add-buttons p{
+	padding-left: 10px;
 }
