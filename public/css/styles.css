@@ -154,6 +154,10 @@ body {
 	padding: 7px 8px;
 }
 
+.btn-blue-new {
+	margin-right: 4px;
+}
+
 .btn-blue:hover {
 	background-color: #0079d9;
 }
