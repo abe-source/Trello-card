@@ -1,8 +1,8 @@
 $(function(){
   
 
-  //Labels UI
-    //ADD NEW LABEL
+  //LABELS UI
+    //add new label
   $('.btn-add').on('click', function(){
     var askLabel = prompt("Please enter label name");
     //if there is nothing enter, add non breakable space to keep size and width of the button.
@@ -31,9 +31,6 @@ $(function(){
       var userDescription = $('.description-area').val();
       $('.description-entered').text(userDescription);
       $('.description-entered').show();
-
-
-
   })
 
       //check is user entered something in description
@@ -43,6 +40,7 @@ $(function(){
     } else {
       $('.description-outter').hide();
       $('.description-options').show();
+      $('.description-entered').css("color", "#4d4d4d");
 
     }
   }
@@ -52,10 +50,9 @@ $(function(){
     $('.btn-edit-description').show();
   }
 
-  $('.btn-edit-saved').on('click', function(){
+  $('.btn-edit-saved, .description-entered').on('click', function(){
     $('.description-entered').hide();
     $('.description-outter').show();
-
   })
 
 
