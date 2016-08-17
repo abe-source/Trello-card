@@ -27,11 +27,21 @@ $(function(){
   })    
       //on buton save
   $('.btn-save-description').on('click', function() {
+      saveUserEntry();
+  })
+
+  $('.description-outter').keyup(function(event){
+    if(event.keyCode == 13){
+        saveUserEntry();
+    }
+});
+
+  function saveUserEntry() {
       checkUserDescription();
       var userDescription = $('.description-area').val();
       $('.description-entered').text(userDescription);
       $('.description-entered').show();
-  })
+  }
 
       //check is user entered something in description
   function checkUserDescription() {
