@@ -190,11 +190,13 @@ body {
 
 .description,
 .description-options,
-.description-entered {
+.description-entered,
+.edit-checkbox-out {
 	display: none;
 }
 
-.description-area {
+.description-area,
+.save-checkbox {
 	width: 500px;
 	resize: none;
 	background-color: #E6E8E9;
@@ -203,6 +205,7 @@ body {
 	padding: 7px;
 	color: #4d4d4d;
 	box-shadow: inset 0 1px 6px rgba(0,0,0,.1);
+	border-radius: 3px;
 }
 
 .format-helper {
@@ -228,7 +231,8 @@ body {
 	margin-top: 5px
 }
 
-.btn-save-description {
+.btn-save-description,
+.btn-save-checkbox {
 	background: -webkit-linear-gradient(top, #61bd4f 0, #5aac44 100%);
 	background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
 	box-shadow: 0 1px 0 #3f6f21;
@@ -241,7 +245,8 @@ body {
 	font-weight: 700;
 }
 
-.btn-close-description {
+.btn-close-description,
+.btn-close-checkbox {
 	height: 2pc;
 	background-color: #EDEFF0;
 	color: #4D4D4D;
@@ -264,6 +269,28 @@ body {
 	line-height: 18px;
 }
 
+.edit-checkbox-out {
+	margin-left: -12px;
+}
+
+.save-checkbox {
+	background-color: #fff;
+}
+.save-checkbox::-webkit-input-placeholder {
+   font-size: 14px;
+}
+
+.save-checkbox:-moz-placeholder { /* Firefox 18- */
+   font-size: 14px; 
+}
+
+.save-checkbox::-moz-placeholder {  /* Firefox 19+ */
+   font-size: 14px; 
+}
+
+.save-checkbox:-ms-input-placeholder {  
+   font-size: 14px;
+}
 
 /*** PROGRESS BAR ***/
 /*General falback*/

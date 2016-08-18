@@ -64,17 +64,22 @@
 				<progress value="33" max="100" id="progress-bar" class="flex-item"></progress>
 			</div> <!-- END OF METER -->
 			<div class="checkbox">
-				<input id="check1" type="checkbox" name="check" value="check1">
+				<input id="check1" type="checkbox" name="check">
 				<label for="check1">Veikiantis Cheklistas</label>
 				<br>
-				<input id="check2" type="checkbox" name="check" value="check2" checked>
+				<input id="check2" type="checkbox" name="check" checked>
 				<label for="check2">Su uzbaigta uzduotimi</label>
 				<br>
-				<input id="check3" type="checkbox" name="check" value="check3">
+				<input id="check3" type="checkbox" name="check">
 				<label for="check3"><i>Markdown'a</i> siandienai paliksim</label>
 			</div> <!-- END OF CHECKBOX -->
 			<div class="add-item">
-				<p>Add an item...</p>
+				<div class="edit-checkbox-out">
+				<textarea class="save-checkbox" rows="1" placeholder="Add an item"></textarea>
+		  	<button class="btn btn-save-checkbox">Add</button>
+		  	<button class="btn btn-close-checkbox"><i class="fa fa-times" aria-hidden="true"></i></button>
+		  	</div>
+				<p class="add-checkbox">Add an item...</p>
 			</div> <!-- END OF ADD-ITEM -->
 		</section> <!-- END OF SECTION CHECKLIST -->
 		<section class="comments">
