@@ -75,11 +75,13 @@ $(function(){
         $('.edit-checkbox-out').show();              
       });
 
+     
+
       //when user pres add button it saves text area value and adds checklist with that value
       $('.btn-save-checkbox').on('click', function(){
         var checkBoxName = $('.save-checkbox').val();
         createCheckbox(checkBoxName);
-        checkBoxName = "";
+        $('.save-checkbox').val("");
       });
 
       function createCheckbox(name) {
