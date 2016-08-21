@@ -84,6 +84,12 @@ $(function(){
         $('.save-checkbox').val("");
       });
 
+      $('.btn-close-checkbox').on('click', function(event){
+        event.stopPropagation();
+        $('.edit-checkbox-out').hide();
+        $('.add-checkbox').show();
+      })
+
       function createCheckbox(name) {
         //fallback if user didn't entered nothing or cancel prompt window.
         if (name === "" || name === null) {
