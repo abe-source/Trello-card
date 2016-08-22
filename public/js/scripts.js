@@ -11,10 +11,10 @@ $(function(){
     }
     var newLabel = ('<button class="btn btn-blue btn-blue-new">' + askLabel + '</button>'); 
     $(newLabel).insertBefore(this);
-  })
+  });
 
 
-    //ADD-REMOVE DESCRIPTION
+    //*************ADD-REMOVE DESCRIPTION
       //show description
   $('.btn-edit-description').on('click', function(){
     $(this).hide();
@@ -24,11 +24,11 @@ $(function(){
       //hide description
   $('.btn-close-description').on('click', function(){
       closeDescription();
-  })    
+  });    
       //on buton save
   $('.btn-save-description').on('click', function() {
       saveUserEntry();
-  })
+  });
       //if user pres enter and textarea is open it saves user entered description
   $('.description-outter').keyup(function(event){
     if(event.keyCode == 13){
@@ -41,7 +41,7 @@ $(function(){
       var userDescription = $('.description-area').val();
       $('.description-entered').text(userDescription);
       $('.description-entered').show();
-  }
+  };
 
       //check is user entered something in description
   function checkUserDescription() {
@@ -53,28 +53,56 @@ $(function(){
       $('.description-entered').css("color", "#4d4d4d");
 
     }
-  }
+  };
       //function to close description
   function closeDescription(){
     $('.description').hide(50);
     $('.btn-edit-description').show();
-  }
+  };
       //when user pres edit or press directly on user desription textarea becomes visible
   $('.btn-edit-saved, .description-entered').on('click', function(){
     $('.description-entered').hide();
     $('.description-outter').show();
-  })
+  });
 
   //CHECKLIST
-      
-      //add new checklist
+    //add new checklist - appded from external html file.
+    $('.new-checklist').on('click', function(e){
+      e.preventDefault();
+      addNewChecklist();
+    });
+
+    function addNewChecklist(){
+      var chkListNewName = prompt("Plese enter new checklist name:");
+      var checklistTemplate = '<div class="checklist-all"><div class="checklist-header container"><div class="fixed"><img src="/img/checklist-ico.png" width="20.02px" height="20px"  class="section-ico" alt="checlist icon"></div>' +
+      '<div class="flex-item"><h3 class="chk-list-name">' + chkListNewName + '</h3></div><div class="checklist-options"><span><u>Hide completed items</u></span><span>&nbsp;&nbsp;<u>Delete</u></span></div></div>' +
+      '<div class="meter container"><label for="progress-bar" class="fixed progress-label">0%</label><progress value="0" max="100" id="progress-bar" class="flex-item"></progress></div>' +
+      '<div class="checkbox"></div>' +
+      '<div class="add-item"><div class="edit-checkbox-out"><textarea class="save-checkbox" rows="1" placeholder="Add an item"></textarea><button class="btn btn-save-checkbox">Add</button>' +
+      '<button class="btn btn-close-checkbox"><i class="fa fa-times" aria-hidden="true"></i></button>' + 
+      '</div><p class="add-checkbox">Add an item...</p></div></div>';
+      $('.checklist').append(checklistTemplate);
+    }
+
+
+  //CHECKLIST OPTIONS
+      //change checklist
+      $('body').on('click','.chk-list-name', function(){
+        var userChecklistName = prompt("Please enter new checklist name:");
+        $(this).text(userChecklistName);
+      })
+
+
+      //add new checkbox
       var idCounter = 4;
       //if user press add item button it hides it and shows textarea to enter button name.
-      $('.add-item').on('click', function(){
-        $('.add-checkbox').hide();
-        $('.edit-checkbox-out').show();              
+      
+      $('body').on('click', '.add-item', function(){
+        $(this).find('.add-checkbox').hide();
+        $(this).find('.edit-checkbox-out').show();
+        // $('.add-checkbox').hide();
+        // $('.edit-checkbox-out').show();
       });
-
      
 
       //when user pres add button it saves text area value and adds checklist with that value
@@ -88,20 +116,24 @@ $(function(){
         event.stopPropagation();
         $('.edit-checkbox-out').hide();
         $('.add-checkbox').show();
-      })
+      });
 
       function createCheckbox(name) {
         //fallback if user didn't entered nothing or cancel prompt window.
         if (name === "" || name === null) {
           name = "&nbsp";
         }
-        $('.checkbox').append('<br><input id="check' + idCounter + '" type="checkbox" name="check"><label for="check' + idCounter + '">' + name + '</label>');
+        $('.checkbox').append('<br><input id="check' + idCounter + '" type="checkbox" name="check"><label for="check' + idCounter + '"><span class="chk-name">' + name + '</span></label>');
         idCounter++;
-      }
+      };
 
-      //change checlist name  
-
-
+      //change checlist name
+        //check through all active elements ?? how to check check box name 
+      $('.checkbox').on('click', 'span', function(e){
+          e.preventDefault();
+          alert("How to change text? :/");
+      });
+      
 
 
       //dynamicly change checkbar depending of completed tasks

@@ -342,7 +342,10 @@ progress[value] {
 .checkbox {
 	margin-top: 8px;
 }
+/*//NEW CHECKLIST STYLE*/
 
+
+/*OLD CHECKLIST STYLE*/
 .checkbox > input[type=checkbox] {
 	display: none;
 }

@@ -47,12 +47,13 @@
   	</section> <!-- END OF SECTION LABELS -->
 	<!-- SECTION CHECKLIST -->
 		<section class="checklist">
+			<div class="checklist-all">
 			<div class="checklist-header container">
 				<div class="fixed">
   		  <img src="/img/checklist-ico.png" width="20.02px" height="20px"  class="section-ico" alt="checlist icon">
   		 </div>
   		<div class="flex-item">
-  		  <h3>Checklist</h3>
+  		  <h3 class="chk-list-name">Checklist</h3>
   		</div>
   		<div class="checklist-options">
 	  		<span><u>Hide completed items</u></span>
@@ -64,14 +65,14 @@
 				<progress value="33" max="100" id="progress-bar" class="flex-item"></progress>
 			</div> <!-- END OF METER -->
 			<div class="checkbox">
-				<input id="check1" type="checkbox" name="check">
-				<label for="check1">Veikiantis Cheklistas</label>
+				<input id="check1" type="checkbox" name="check" />
+				<label for="check1"><span class="chk-text">Veikiantis Cheklistas<span></label>
 				<br>
 				<input id="check2" type="checkbox" name="check" checked>
-				<label for="check2">Su uzbaigta uzduotimi</label>
+				<label for="check2"><span class="chk-text">Su uzbaigta uzduotimi<span></label>
 				<br>
 				<input id="check3" type="checkbox" name="check">
-				<label for="check3"><i>Markdown'a</i> siandienai paliksim</label>
+				<label for="check3"><span class="chk-text"><i>Markdown'a</i> siandienai paliksim<span></label>
 			</div> <!-- END OF CHECKBOX -->
 			<div class="add-item">
 				<div class="edit-checkbox-out">
@@ -81,6 +82,7 @@
 		  	</div>
 				<p class="add-checkbox">Add an item...</p>
 			</div> <!-- END OF ADD-ITEM -->
+			</div>
 		</section> <!-- END OF SECTION CHECKLIST -->
 		<section class="comments">
 			<div class="comments-header container">
@@ -169,7 +171,7 @@
 				<a class="btn btn-right" href="" aria-label="Members">
 	  			<i class="fa fa-tag" aria-hidden="true"></i>Labels
 				</a>
-				<a class="btn btn-right" href="" aria-label="Members">
+				<a class="btn btn-right new-checklist" href="" aria-label="Members">
 	  			<i class="fa fa-check-square-o" aria-hidden="true"></i>Cheklist
 				</a>
 				<a class="btn btn-right" href="" aria-label="Members">
@@ -199,7 +201,7 @@
 		</section> <!-- END OF ADD-BUTTONS -->
 	</div>
   </div> <!-- END OF WRAPPER -->	
-<script src="js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="js/scripts.js"></script>	
 
 </body>
