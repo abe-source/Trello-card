@@ -100,16 +100,14 @@ $(function(){
       $('body').on('click', '.add-item', function(){
         $(this).find('.add-checkbox').hide();
         $(this).find('.edit-checkbox-out').show();
-        // $('.add-checkbox').hide();
-        // $('.edit-checkbox-out').show();
       });
      
 
       //when user pres add button it saves text area value and adds checklist with that value
-      $('.btn-save-checkbox').on('click', function(){
+      $('body').on('click', '.btn-save-checkbox', function(){
         var checkBoxName = $('.save-checkbox').val();
         createCheckbox(checkBoxName);
-        $('.save-checkbox').val("");
+        $(this).find('.save-checkbox').val("");
       });
 
       $('.btn-close-checkbox').on('click', function(event){
@@ -127,6 +125,8 @@ $(function(){
         idCounter++;
       };
 
+     
+
       //change checlist name
         //check through all active elements ?? how to check check box name 
       $('.checkbox').on('click', 'span', function(e){
@@ -137,8 +137,20 @@ $(function(){
 
 
       //dynamicly change checkbar depending of completed tasks
+      var countChecked = function() {
+        var n = $( "input:checked" ).length;
+        var total = $("input[type=checkbox]").length;
+        var test = Math.floor((n / total) * 100);
+        $("#progress-bar").val(test)
+        $(".progress-label").text(test + "%");
+        
+      };
+
+      countChecked();
 
 
+
+      $("input[type=checkbox]").on("click", countChecked);
 
 
 
