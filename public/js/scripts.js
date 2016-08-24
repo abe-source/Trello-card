@@ -108,6 +108,7 @@ $(function(){
         var checkBoxName = $('.save-checkbox').val();
         createCheckbox(checkBoxName);
         $(this).find('.save-checkbox').val("");
+        countChecked();
       });
 
       $('.btn-close-checkbox').on('click', function(event){
@@ -150,7 +151,7 @@ $(function(){
 
 
 
-      $("input[type=checkbox]").on("click", countChecked);
+      $("body").on("click", "input[type=checkbox]", countChecked);
 
 
 
