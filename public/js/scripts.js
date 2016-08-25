@@ -138,38 +138,39 @@ $(function(){
 
 
       //dynamicly change checkbar depending of completed tasks
-      var countChecked = function() {
+      var progressBar = function() {
         var n = $( "input:checked" ).length;
         var total = $("input[type=checkbox]").length;
-        var test = Math.floor((n / total) * 100);
-        $("#progress-bar").val(test)
-        $(".progress-label").text(test + "%");
+        var pBar = Math.floor((n / total) * 100);
+        $("#progress-bar").val(pBar)
+        $(".progress-label").text(pBar + "%");
         
       };
 
-      countChecked();
+      progressBar();
+      $("body").on("click", "input[type=checkbox]", progressBar);
 
+      //hide  tasks which is done
+      var hideChecked = function() {
+        var n = $("input:checked").length;
+        var showHiddenCount = "Show checked items (" + n + ")";
+        $(".hide-completed").hide();
+        $(".show-completed").show();
+        $(".show-completed").text(showHiddenCount);
+        $(".chk-text:checked").hide();     
+      }
 
+      $("body").on("click", ".hide-completed", hideChecked)
 
-      $("body").on("click", "input[type=checkbox]", countChecked);
+      var showChecked = function() {
+        $(".hide-completed").show();
+        $(".show-completed").hide()
+        
+      }
 
-
-
-
-      //hide done tasks
-
-
-
-
-
-      //show how many tasks is closed
-
-
-
-
+      $("body").on("click", ".show-completed", showChecked);
 
       //delete all checklist
-
 
 
 

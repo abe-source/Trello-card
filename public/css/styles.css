@@ -346,6 +346,7 @@ progress[value] {
 
 
 /*OLD CHECKLIST STYLE*/
+
 .checkbox > input[type=checkbox] {
 	display: none;
 }
