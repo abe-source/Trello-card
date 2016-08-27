@@ -347,11 +347,11 @@ progress[value] {
 
 /*OLD CHECKLIST STYLE*/
 
-.checkbox > input[type=checkbox] {
+.checkbox-check > input[type=checkbox] {
 	display: none;
 }
 
-.checkbox > label {
+.checkbox-check > label {
 	display: inline-block;
 	cursor: pointer;
 	position: relative;
@@ -361,7 +361,7 @@ progress[value] {
 	font-size: 15px;
 }
 
-.checkbox > label:before {
+.checkbox-check > label:before {
 	content: " ";
 	display: inline-block;
 	width: 16px;
@@ -374,7 +374,7 @@ progress[value] {
 	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .5);
 }
 
-.checkbox > input[type=checkbox]:checked + label:before {
+.checkbox-check > input[type=checkbox]:checked + label:before {
 	content: "\2713";
 	text-shadow: 1px 1px 1px rgba(0,0,0,.2);
 	background-color: #edeff0;

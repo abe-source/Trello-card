@@ -75,7 +75,7 @@ $(function(){
     function addNewChecklist(){
       var chkListNewName = prompt("Plese enter new checklist name:");
       var checklistTemplate = '<div class="checklist-all"><div class="checklist-header container"><div class="fixed"><img src="/img/checklist-ico.png" width="20.02px" height="20px"  class="section-ico" alt="checlist icon"></div>' +
-      '<div class="flex-item"><h3 class="chk-list-name">' + chkListNewName + '</h3></div><div class="checklist-options"><span><u>Hide completed items</u></span><span>&nbsp;&nbsp;<u>Delete</u></span></div></div>' +
+      '<div class="flex-item"><h3 class="chk-list-name">' + chkListNewName + '</h3></div><div class="checklist-options"><span><u>Hide completed items</u></span><span>&nbsp;&nbsp;<u class="delete-checklist">Delete</u></span></div></div>' +
       '<div class="meter container"><label for="progress-bar" class="fixed progress-label">0%</label><progress value="0" max="100" id="progress-bar" class="flex-item"></progress></div>' +
       '<div class="checkbox"></div>' +
       '<div class="add-item"><div class="edit-checkbox-out"><textarea class="save-checkbox" rows="1" placeholder="Add an item"></textarea><button class="btn btn-save-checkbox">Add</button>' +
@@ -122,7 +122,7 @@ $(function(){
         if (name === "" || name === null) {
           name = "&nbsp";
         }
-        $('.checkbox').append('<br><input id="check' + idCounter + '" type="checkbox" name="check"><label for="check' + idCounter + '"><span class="chk-name">' + name + '</span></label>');
+        $('.checkbox').append('<div class="checkbox-check"><input id="check' + idCounter + '" type="checkbox" name="check"><label for="check' + idCounter + '"><span class="chk-name">' + name + '</span></label></div>');
         idCounter++;
       };
 
@@ -142,7 +142,7 @@ $(function(){
         var n = $( "input:checked" ).length;
         var total = $("input[type=checkbox]").length;
         var pBar = Math.floor((n / total) * 100);
-        $("#progress-bar").val(pBar)
+        $("#progress-bar").val(pBar);
         $(".progress-label").text(pBar + "%");
         
       };
@@ -157,7 +157,8 @@ $(function(){
         $(".hide-completed").hide();
         $(".show-completed").show();
         $(".show-completed").text(showHiddenCount);
-        $(".chk-text:checked").hide();     
+        $("input:checked").hide();
+        $("input:checked").next().hide();
       }
 
       $("body").on("click", ".hide-completed", hideChecked)
@@ -165,14 +166,18 @@ $(function(){
       var showChecked = function() {
         $(".hide-completed").show();
         $(".show-completed").hide()
+        $("input:checked").next().show();
+
         
       }
 
       $("body").on("click", ".show-completed", showChecked);
 
-      //delete all checklist
-
-
+      //delete checklist
+      $(document).on("click", ".delete-checklist", function() {
+        $(".checklist-all").hide();
+        
+      });
 
 
 
