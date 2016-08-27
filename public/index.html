@@ -5,6 +5,7 @@
 	<title>Trello Card</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/jquery-ui.theme.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -103,7 +104,7 @@
 					<img src="/img/user-face.png" width="30px" height="30px"  class="section-ico" alt="user profile picture">
 				</div>
 				<div class="flex-item text-area">
-					<textarea placeholder="Write a comment..." name="comments" class="comment-area" rows="3"></textarea>
+					<textarea placeholder="Write a comment..." onfocus="this.placeholder = ''" name="comments" class="comment-area" rows="3"></textarea>
 					<div class="text-area-options">
 						<img class="t-area-opt" src="img/attached-ico.png" width="12px" height="12px" alt="attach file icon">
 						<img class="t-area-opt" src="img/at-ico.png" width="12px" height="12px" alt="add members icon">
@@ -127,10 +128,12 @@
 				<div class="user-face usr-lg fixed">
 					<img src="/img/user-face.png">
 				</div>
-				<div class="user-info flex-item">
+				<div class="flex-item user-comment-outter">
+					<div class="user-comment user-info">
 					<h4>Eligijus</h4>
 					<p class="activity-comment-lg">Galima Prideti Komentara.</p>
-					<p class="activity-time">4 minutes ago - <span><u>Edit</u> - <u>Delete</u></p>
+					<p class="activity-time">4 minutes ago - <span><u>Edit</u> - <u class="delete-comment">Delete</u></p>
+					</div>
 				</div>
 			</div> <!-- END OF USER ACTIVITY -->
 			<div class="user-activity-small container">
@@ -207,6 +210,7 @@
 	</div>
   </div> <!-- END OF WRAPPER -->	
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script   src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"   integrity="sha256-55Jz3pBCF8z9jBO1qQ7cIf0L+neuPTD1u7Ytzrp2dqo="   crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>	
 
 </body>

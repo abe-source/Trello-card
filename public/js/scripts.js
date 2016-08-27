@@ -11,6 +11,7 @@ $(function(){
     }
     var newLabel = ('<button class="btn btn-blue btn-blue-new">' + askLabel + '</button>'); 
     $(newLabel).insertBefore(this);
+    newLabel.localStorage;
   });
 
 
@@ -177,15 +178,24 @@ $(function(){
       $(document).on("click", ".delete-checklist", function() {
         $(".checklist-all").hide();
         
-      });
-
-
-
+      }); 
 
       // + bonus drag and drop item changing their place
 
+  //COMMENTS BOX
 
-
+      //Add comment to activity log
+      $("body").on("click", ".btn-send-comment", function() {
+        var comment = $(".comment-area").val();
+        var commentTime = $.now();
+        var userComment = '<div class="user-comment user-info"><h4>Eligijus</h4><p class="activity-comment-lg">' + comment + '</p>' +
+          '<p class="activity-time">just now - <span><u>Edit</u> - <u class="delete-comment">Delete</u></p></div>';
+        $(".user-comment-outter").prepend(userComment);
+        $(".comment-area").val('');
+      });
+    
+      //Dumy buttons on comment log. 
+   
 
 
 
