@@ -3,11 +3,12 @@ $(function(){
   //JQUERY UI
 
     $( "#dialog-1" ).dialog({
-       autoOpen: false,  
+       autoOpen: false,
+       title: "Create Label",
+       closeText: "x",
+       resizable: false 
     });
-    $( "#opener" ).click(function() {
-       $( "#dialog-1" ).dialog( "open" );
-    });
+    
          
 
   //LABELS UI
@@ -24,8 +25,8 @@ $(function(){
     var labelColor = $('input[name=labelColor]:checked').val();
     var newLabel = ('<button class="btn btn-blue btn-blue-new ' + labelColor +'">' + askLabel + '</button>');
     $('#askLabel').val('');
-    
     $(newLabel).insertBefore('.btn-add');
+    $("#dialog-1").dialog("close");
   })
 
   
