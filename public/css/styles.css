@@ -191,7 +191,8 @@ body {
 .description,
 .description-options,
 .description-entered,
-.edit-checkbox-out {
+.edit-checkbox-out,
+#dialog-1 {
 	display: none;
 }
 
@@ -232,7 +233,8 @@ body {
 }
 
 .btn-save-description,
-.btn-save-checkbox {
+.btn-save-checkbox,
+.btn-create-label {
 	background: -webkit-linear-gradient(top, #61bd4f 0, #5aac44 100%);
 	background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
 	box-shadow: 0 1px 0 #3f6f21;
@@ -544,3 +546,90 @@ hr {
 .add-buttons p{
 	padding-left: 10px;
 }
+
+/************************************
+*********** jQuery UI ************
+*************************************/
+
+/********* LABEL DIALOG ************/
+.radio-color input[type="radio"] {
+	display: none;
+}
+
+.radio-color label {
+    display:inline-block;
+	width: 34px;
+	height: 30px;
+	margin: 0 10px 10px 0;
+	border-radius: 3px;
+	padding: 3px 6px;
+}
+
+#askLabel {
+	box-sizing: border-box;
+	background-color: #E2E4E6;
+	border: 1px solid #CDD2D4;
+	border-radius: 3px;
+	display: block;
+	min-height: 34px;
+	padding: 7px;
+	width: 264px;
+	margin: 4px 0 12px 0;	
+}
+
+#dialog-1 h5 {
+	margin: 0 0 4px 0;
+}
+
+.radio-color input[type="radio"]:checked + label {
+    opacity: .40;
+}
+
+/** Labels Colors **/
+.label-green {
+	background-color: #61BD4F;
+}
+
+.label-yellow {
+	background-color: #F2D600;
+}
+
+.label-orange {
+	background-color: #FFAB4A;
+}
+
+.label-red {
+	background-color: #EB5A46;
+}
+
+.label-violet {
+	background-color: #C377E0;
+}
+
+.label-blue {
+	background-color: #0079BF;
+}
+
+.label-lightblue {
+	background-color: #0079BF;
+}
+
+.label-lightgreen {
+	background-color: #51E898;
+}
+
+.label-pink {
+	background-color: #FF80CE;
+}
+
+.label-black {
+	background-color: #4d4d4d;
+}
+
+.label-grey {
+	background-color: #B6BBBF;
+}
+
+
+
+

@@ -1,18 +1,35 @@
 $(function(){
   
+  //JQUERY UI
+
+    $( "#dialog-1" ).dialog({
+       autoOpen: false,
+       title: "Create Label",
+       closeText: "x",
+       resizable: false 
+    });
+    
+         
 
   //LABELS UI
     //add new label
   $('.btn-add').on('click', function(){
-    var askLabel = prompt("Please enter label name");
-    //if there is nothing enter, add non breakable space to keep size and width of the button.
+      $( "#dialog-1" ).dialog( "open" );
+  });
+
+  $('body').on('click', '.btn-create-label',function() {
+    var askLabel = $('#askLabel').val();
     if(askLabel === "" || askLabel === null) {
       askLabel = "&nbsp";
     }
-    var newLabel = ('<button class="btn btn-blue btn-blue-new">' + askLabel + '</button>'); 
-    $(newLabel).insertBefore(this);
-    newLabel.localStorage;
-  });
+    var labelColor = $('input[name=labelColor]:checked').val();
+    var newLabel = ('<button class="btn btn-blue btn-blue-new ' + labelColor +'">' + askLabel + '</button>');
+    $('#askLabel').val('');
+    $(newLabel).insertBefore('.btn-add');
+    $("#dialog-1").dialog("close");
+  })
+
+  
 
 
     //*************ADD-REMOVE DESCRIPTION
