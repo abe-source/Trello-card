@@ -565,18 +565,49 @@ hr {
 }
 
 /** Labels Colors **/
-.label-blue {
-	background-color: lightblue;
+.label-green {
+	background-color: #61BD4F;
 }
 
 .label-yellow {
-	background-color: yellow;
+	background-color: #F2D600;
 }
 
-.label-green {
-	background-color: green;
+.label-orange {
+	background-color: #FFAB4A;
 }
 
+.label-red {
+	background-color: #EB5A46;
+}
+
+.label-violet {
+	background-color: #C377E0;
+}
+
+.label-blue {
+	background-color: #0079BF;
+}
+
+.label-lightblue {
+	background-color: #0079BF;
+}
+
+.label-lightgreen {
+	background-color: #51E898;
+}
+
+.label-pink {
+	background-color: #FF80CE;
+}
+
+.label-black {
+	background-color: #4d4d4d;
+}
+
+.label-grey {
+	background-color: #B6BBBF;
+}
 
 
 
