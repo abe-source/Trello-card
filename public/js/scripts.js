@@ -1,18 +1,32 @@
 $(function(){
   
+  //JQUERY UI
+
+    $( "#dialog-1" ).dialog({
+       autoOpen: false,  
+    });
+    $( "#opener" ).click(function() {
+       $( "#dialog-1" ).dialog( "open" );
+    });
+         
 
   //LABELS UI
     //add new label
   $('.btn-add').on('click', function(){
-    var askLabel = prompt("Please enter label name");
-    //if there is nothing enter, add non breakable space to keep size and width of the button.
+      $( "#dialog-1" ).dialog( "open" );
+  });
+
+  $('body').on('click', '.btn-create-label',function() {
+    var askLabel = $('#askLabel').val();
     if(askLabel === "" || askLabel === null) {
       askLabel = "&nbsp";
     }
-    var newLabel = ('<button class="btn btn-blue btn-blue-new">' + askLabel + '</button>'); 
-    $(newLabel).insertBefore(this);
-    newLabel.localStorage;
-  });
+    var newLabel = ('<button class="btn btn-blue btn-blue-new">' + askLabel + '</button>');
+    $('#askLabel').val('');
+    $(newLabel).insertBefore('.btn-add');
+  })
+
+  
 
 
     //*************ADD-REMOVE DESCRIPTION

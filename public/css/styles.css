@@ -191,7 +191,8 @@ body {
 .description,
 .description-options,
 .description-entered,
-.edit-checkbox-out {
+.edit-checkbox-out,
+#dialog-1 {
 	display: none;
 }
 
@@ -544,3 +545,33 @@ hr {
 .add-buttons p{
 	padding-left: 10px;
 }
+
+/************************************
+*********** jQuery UI ************
+*************************************/
+
+.label-colors {
+	display:inline-block;
+	width: 34px;
+	height: 30px;
+	margin: 0 10px 10px 0;
+	border-radius: 3px;
+	padding: 3px 6px;
+}
+
+#label-blue {
+	background-color: lightblue;
+}
+
+#label-yellow {
+	background-color: yellow;
+}
+
+#label-green {
+	background-color: green;
+}
+
+
+
+
+
