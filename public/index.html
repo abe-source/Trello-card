@@ -30,9 +30,14 @@
 			<input type="text" name="labelName" id="askLabel">
 	  	 	<div class="label-colors-outter">
 	  	 		<h5>Select a color</h5>
-	  	 		<span id="label-blue" class="label-colors"></span>
-	  	 		<span id="label-yellow" class="label-colors"></span>
-	  	 		<span id="label-green" class="label-colors"></span>
+	  	 		<div class="radio-color">
+		  	 		<input type="radio" name="labelColor" id="radio1" value="label-blue"></input>
+		  	 		<label for="radio1" class="label-blue"></label>
+		  	 		<input type="radio" name="labelColor" id="radio2" value="label-yellow"></input>
+		  	 		<label for="radio2" class="label-yellow"></label>
+		  	 		<input type="radio" name="labelColor" id="radio3" value="label-green"></input>
+		  	 		<label for="radio3" class="label-green"></label>
+	  	 		</div>
 	  	 	</div> <!-- EOF label colors outter -->
 	  	 	<button class="btn btn-create-label">Create</button>
 	  	 </div> <!-- End of Create Label Dialog -->

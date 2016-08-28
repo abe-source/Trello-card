@@ -550,8 +550,13 @@ hr {
 *********** jQuery UI ************
 *************************************/
 
-.label-colors {
-	display:inline-block;
+/********* LABEL DIALOG ************/
+.radio-color input[type="radio"] {
+	display: none;
+}
+
+.radio-color label {
+    display:inline-block;
 	width: 34px;
 	height: 30px;
 	margin: 0 10px 10px 0;
@@ -559,15 +564,16 @@ hr {
 	padding: 3px 6px;
 }
 
-#label-blue {
+/** Labels Colors **/
+.label-blue {
 	background-color: lightblue;
 }
 
-#label-yellow {
+.label-yellow {
 	background-color: yellow;
 }
 
-#label-green {
+.label-green {
 	background-color: green;
 }
 

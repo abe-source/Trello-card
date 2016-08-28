@@ -21,8 +21,10 @@ $(function(){
     if(askLabel === "" || askLabel === null) {
       askLabel = "&nbsp";
     }
-    var newLabel = ('<button class="btn btn-blue btn-blue-new">' + askLabel + '</button>');
+    var labelColor = $('input[name=labelColor]:checked').val();
+    var newLabel = ('<button class="btn btn-blue btn-blue-new ' + labelColor +'">' + askLabel + '</button>');
     $('#askLabel').val('');
+    
     $(newLabel).insertBefore('.btn-add');
   })
 
