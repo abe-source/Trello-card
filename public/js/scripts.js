@@ -8,9 +8,7 @@ $(function(){
        closeText: "x",
        resizable: false 
     });
-    
          
-
   //LABELS UI
     //add new label
   $('.btn-add').on('click', function(){
@@ -28,9 +26,6 @@ $(function(){
     $(newLabel).insertBefore('.btn-add');
     $("#dialog-1").dialog("close");
   })
-
-  
-
 
     //*************ADD-REMOVE DESCRIPTION
       //show description
