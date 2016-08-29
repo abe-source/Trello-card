@@ -1,7 +1,7 @@
 $(function(){
   
   //JQUERY UI
-
+    //Label Dialog
     $( "#dialog-1" ).dialog({
        autoOpen: false,
        title: "Create Label",
@@ -26,6 +26,34 @@ $(function(){
     $(newLabel).insertBefore('.btn-add');
     $("#dialog-1").dialog("close");
   })
+
+
+    //Checklist Dialog
+    $( "#dialog-2" ).dialog({
+       autoOpen: false,
+       title: "Add Checklist",
+       closeText: "x",
+       resizable: false ,
+       position: {
+        my: "right center",
+        at: "right center"
+       }
+    });
+
+    $('body').on('click','.new-checklist', function(e){
+        e.preventDefault()
+        $('#dialog-2').dialog('open');
+        // $('.new-checklist').on('click', function(e){
+    //   e.preventDefault();
+    //   addNewChecklist();
+    // });
+      })
+
+    $('body').on('click', '.btn-create-checklist', function(){
+      addNewChecklist();
+      $('#dialog-2').dialog('close');
+    })
+
 
     //*************ADD-REMOVE DESCRIPTION
       //show description
@@ -80,13 +108,13 @@ $(function(){
 
   //CHECKLIST
     //add new checklist - appded from external html file.
-    $('.new-checklist').on('click', function(e){
-      e.preventDefault();
-      addNewChecklist();
-    });
+    // $('.new-checklist').on('click', function(e){
+    //   e.preventDefault();
+    //   addNewChecklist();
+    // });
 
     function addNewChecklist(){
-      var chkListNewName = prompt("Plese enter new checklist name:");
+      var chkListNewName = $('#askChecklist').val();
       var checklistTemplate = '<div class="checklist-all"><div class="checklist-header container"><div class="fixed"><img src="/img/checklist-ico.png" width="20.02px" height="20px"  class="section-ico" alt="checlist icon"></div>' +
       '<div class="flex-item"><h3 class="chk-list-name">' + chkListNewName + '</h3></div><div class="checklist-options"><span><u>Hide completed items</u></span><span>&nbsp;&nbsp;<u class="delete-checklist">Delete</u></span></div></div>' +
       '<div class="meter container"><label for="progress-bar" class="fixed progress-label">0%</label><progress value="0" max="100" id="progress-bar" class="flex-item"></progress></div>' +

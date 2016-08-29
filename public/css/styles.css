@@ -192,7 +192,8 @@ body {
 .description-options,
 .description-entered,
 .edit-checkbox-out,
-#dialog-1 {
+#dialog-1,
+#dialog-2 {
 	display: none;
 }
 
@@ -234,7 +235,8 @@ body {
 
 .btn-save-description,
 .btn-save-checkbox,
-.btn-create-label {
+.btn-create-label,
+.btn-create-checklist {
 	background: -webkit-linear-gradient(top, #61bd4f 0, #5aac44 100%);
 	background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
 	box-shadow: 0 1px 0 #3f6f21;
@@ -578,7 +580,8 @@ hr {
 	border: none;
 }
 
-#dialog-1 {
+#dialog-1,
+#dialog-2 {
 	margin: 10px;
 	border: none;
 	border-top: 1px solid #b5b5b5;
@@ -600,7 +603,8 @@ hr {
 	padding: 3px 6px;
 }
 
-#askLabel {
+#askLabel,
+#askChecklist {
 	box-sizing: border-box;
 	background-color: #E2E4E6;
 	border: 1px solid #CDD2D4;
@@ -612,11 +616,13 @@ hr {
 	margin: 4px 0 12px 0;	
 }
 
-#askLabel:focus {
+#askLabel:focus,
+#askChecklist:focus {
 	background: #fff;
 }
 
-#dialog-1 h5 {
+#dialog-1,
+#dialog-2 h5 {
 	margin: 0 0 4px 0;
 }
 
