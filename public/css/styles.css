@@ -552,15 +552,50 @@ hr {
 *************************************/
 
 /********* LABEL DIALOG ************/
+
+/** Dialog Styling **/
+
+.ui-widget-header {
+	background: #fff;
+	font-weight: normal;
+	color: #8c8c8c;
+	border: none;
+	text-align: center;
+	margin: 10px;
+	font-size: 14px;
+}
+
+.ui-button {
+	background: #fff;
+	border: none;
+	color: #8c8c8c;
+	float: right;
+	margin-top: -2px;
+}
+
+.ui-button:hover {
+	background: #fff;
+	border: none;
+}
+
+#dialog-1 {
+	margin: 10px;
+	border: none;
+	border-top: 1px solid #b5b5b5;
+	padding-top: 10px;
+}
+
+/****/
+
 .radio-color input[type="radio"] {
 	display: none;
 }
 
 .radio-color label {
-    display:inline-block;
+  display:inline-block;
 	width: 34px;
 	height: 30px;
-	margin: 0 10px 10px 0;
+	margin: 0 5px 5px 0;
 	border-radius: 3px;
 	padding: 3px 6px;
 }
@@ -575,6 +610,10 @@ hr {
 	padding: 7px;
 	width: 264px;
 	margin: 4px 0 12px 0;	
+}
+
+#askLabel:focus {
+	background: #fff;
 }
 
 #dialog-1 h5 {
@@ -611,7 +650,7 @@ hr {
 }
 
 .label-lightblue {
-	background-color: #0079BF;
+	background-color: #40D1E8;
 }
 
 .label-lightgreen {
